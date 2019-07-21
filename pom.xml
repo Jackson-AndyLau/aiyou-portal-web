@@ -10,6 +10,18 @@
 	<artifactId>aiyou-portal-web</artifactId>
 	<packaging>war</packaging>
 	<dependencies>
+		<!-- 网站内容管理后台服务接口 -->
+		<dependency>
+			<groupId>com.huazai.b2c.aiyou</groupId>
+			<artifactId>aiyou-content-interface</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- 后台商品管理服务接口 -->
+		<dependency>
+			<groupId>com.huazai.b2c.aiyou</groupId>
+			<artifactId>aiyou-manager-interface</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- Spring 相关 -->
 		<dependency>
 			<groupId>org.springframework</groupId>

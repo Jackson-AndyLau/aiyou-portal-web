@@ -1,7 +1,14 @@
 package com.huazai.b2c.aiyou.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.huazai.b2c.aiyou.pojo.TbContent;
+import com.huazai.b2c.aiyou.service.TbContentService;
 
 /**
  * 
@@ -19,6 +26,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class IndexController
 {
+	@Autowired
+	private TbContentService tbContentService;
+
+	@Value("${AD_CATEGORY_ID}")
+	private Long AD_CATEGORY_ID;
+	@Value("${AD_HEIGHT}")
+	private String AD_HEIGHT;
+	@Value("${AD_HEIGHT_B}")
+	private String AD_HEIGHT_B;
+	@Value("${AD_WIDTH}")
+	private String AD_WIDTH;
+	@Value("${AD_WIDTH_B}")
+	private String AD_WIDTH_B;
 
 	/**
 	 * 
@@ -37,7 +57,10 @@ public class IndexController
 	@RequestMapping("/index")
 	public String showIndex()
 	{
-
+		// 调用服务获取TbContent列表
+		List<TbContent> tbContents = tbContentService.geTbContentListByCid(AD_CATEGORY_ID);
+		
 		return "index";
 	}
+
 }
