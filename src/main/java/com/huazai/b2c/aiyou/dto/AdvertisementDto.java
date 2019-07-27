@@ -15,14 +15,25 @@ package com.huazai.b2c.aiyou.dto;
  */
 public class AdvertisementDto
 {
+
+	private String src; // pic
 	private String srcB; // pic2
 	private String height; // 自定义
-	private String alt; // subtitle中获取
-	private String width; // 自定义
-	private String src; // pic
-	private String widthB; // 自定义
-	private String href; // url
 	private String heightB; // 自定义
+	private String width; // 自定义
+	private String widthB; // 自定义
+	private String alt; // subtitle中获取
+	private String href; // url
+
+	public String getSrc()
+	{
+		return src;
+	}
+
+	public void setSrc(String src)
+	{
+		this.src = src;
+	}
 
 	public String getSrcB()
 	{
@@ -44,14 +55,14 @@ public class AdvertisementDto
 		this.height = height;
 	}
 
-	public String getAlt()
+	public String getHeightB()
 	{
-		return alt;
+		return heightB;
 	}
 
-	public void setAlt(String alt)
+	public void setHeightB(String heightB)
 	{
-		this.alt = alt;
+		this.heightB = heightB;
 	}
 
 	public String getWidth()
@@ -64,16 +75,6 @@ public class AdvertisementDto
 		this.width = width;
 	}
 
-	public String getSrc()
-	{
-		return src;
-	}
-
-	public void setSrc(String src)
-	{
-		this.src = src;
-	}
-
 	public String getWidthB()
 	{
 		return widthB;
@@ -84,6 +85,16 @@ public class AdvertisementDto
 		this.widthB = widthB;
 	}
 
+	public String getAlt()
+	{
+		return alt;
+	}
+
+	public void setAlt(String alt)
+	{
+		this.alt = alt;
+	}
+
 	public String getHref()
 	{
 		return href;
@@ -92,16 +103,6 @@ public class AdvertisementDto
 	public void setHref(String href)
 	{
 		this.href = href;
-	}
-
-	public String getHeightB()
-	{
-		return heightB;
-	}
-
-	public void setHeightB(String heightB)
-	{
-		this.heightB = heightB;
 	}
 
 }

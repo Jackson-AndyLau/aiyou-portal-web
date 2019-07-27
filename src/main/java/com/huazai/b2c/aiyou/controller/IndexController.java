@@ -1,14 +1,18 @@
 package com.huazai.b2c.aiyou.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.huazai.b2c.aiyou.dto.AdvertisementDto;
 import com.huazai.b2c.aiyou.pojo.TbContent;
 import com.huazai.b2c.aiyou.service.TbContentService;
+import com.huazai.b2c.aiyou.utils.JsonUtils;
 
 /**
  * 
@@ -55,11 +59,25 @@ public class IndexController
 	 * @version : V1.0.0
 	 */
 	@RequestMapping("/index")
-	public String showIndex()
+	public String showIndex(Model model)
 	{
 		// 调用服务获取TbContent列表
 		List<TbContent> tbContents = tbContentService.geTbContentListByCid(AD_CATEGORY_ID);
-		
+		List<AdvertisementDto> adList = new ArrayList<>();
+		for (TbContent tbContent : tbContents)
+		{
+			AdvertisementDto advertisementDto = new AdvertisementDto();
+			advertisementDto.setSrc(tbContent.getPic());
+			advertisementDto.setSrcB(tbContent.getPic2());
+			advertisementDto.setHeight(AD_HEIGHT);
+			advertisementDto.setHeightB(AD_HEIGHT_B);
+			advertisementDto.setWidth(AD_WIDTH);
+			advertisementDto.setWidthB(AD_WIDTH_B);
+			advertisementDto.setAlt(tbContent.getSubTitle());
+			advertisementDto.setHref(tbContent.getUrl());
+			adList.add(advertisementDto);
+		}
+		model.addAttribute("contentn_ad_list", JsonUtils.objectToJson(adList));
 		return "index";
 	}
 
