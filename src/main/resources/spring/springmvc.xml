@@ -35,7 +35,7 @@
 	<!-- 配置远程Dubbo服务地址 -->
 	<dubbo:application name="aiyou-portal-web" />
 	<dubbo:registry protocol="zookeeper"
-		address="192.168.159.148:2181" />
+		address="${single.zookeeper.baseUrl}" />
 
 	<!-- 应用调用远程服务接口 -->
 	<dubbo:reference
