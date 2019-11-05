@@ -103,7 +103,7 @@
 				</li>
 				<li class="fore2">返回<a href="/" target="_blank">淘淘首页</a></li>
 				<li class="fore3">错误消息</li>
- 				<li class="fore4">${message }</li>
+ 				<li class="fore4">${message}</li>
 			</ul>
 		</div>
 	</div>
