@@ -3,9 +3,11 @@ package com.huazai.b2c.aiyou.exception;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.mail.javamail.InternetAddressEditor;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.huazai.b2c.aiyou.utils.SendMailUtils;
+import com.huazai.b2c.aiyou.utils.SendSMSUtils;
 
 /**
  * 
@@ -30,7 +32,7 @@ public class GlobalHandlerExceptionResolver implements HandlerExceptionResolver
 		// 1、写日志文件
 		
 		// 2、发送邮件
-		
+		SendMailUtils.doSendTextMail();
 		// 3、发送短信提醒
 		
 		// 4、捕获错误并跳转到友好的提示页面
