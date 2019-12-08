@@ -34,7 +34,7 @@ public class GlobalHandlerExceptionResolver implements HandlerExceptionResolver
 		// 2、发送邮件
 		SendMailUtils.doSendTextMail();
 		// 3、发送短信提醒
-		SendSMSUtils.doSendSMS();
+        SendSMSUtils.doSendSMS();
 		// 4、捕获错误并跳转到友好的提示页面
 		ModelAndView modelAndView = new ModelAndView();
 		modelAndView.addObject("code", "50000");
