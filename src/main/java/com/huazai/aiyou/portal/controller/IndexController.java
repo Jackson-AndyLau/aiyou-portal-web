@@ -1,4 +1,4 @@
-package com.huazai.b2c.aiyou.controller;
+package com.huazai.aiyou.portal.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +9,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.huazai.b2c.aiyou.dto.AdvertisementDto;
-import com.huazai.b2c.aiyou.pojo.TbContent;
-import com.huazai.b2c.aiyou.service.TbContentService;
-import com.huazai.b2c.aiyou.utils.JsonUtils;
+import com.huazai.aiyou.common.dto.AdvertisementDto;
+import com.huazai.aiyou.common.utils.JsonUtils;
+import com.huazai.aiyou.content.pojo.TbContent;
+import com.huazai.aiyou.content.service.TbContentService;
 
 /**
  * 

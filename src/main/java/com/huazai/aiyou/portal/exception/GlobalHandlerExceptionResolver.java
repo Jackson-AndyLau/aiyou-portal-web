@@ -1,4 +1,4 @@
-package com.huazai.b2c.aiyou.exception;
+package com.huazai.aiyou.portal.exception;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -6,8 +6,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.huazai.b2c.aiyou.utils.SendMailUtils;
-import com.huazai.b2c.aiyou.utils.SendSMSUtils;
+import com.huazai.aiyou.common.utils.SendMailUtils;
+import com.huazai.aiyou.common.utils.SendSMSUtils;
 
 /**
  * 
